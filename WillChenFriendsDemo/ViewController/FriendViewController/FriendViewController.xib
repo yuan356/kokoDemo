@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendViewController" customModule="WillChenFriendsDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="friendTableView" destination="7ky-3a-Tom" id="LKG-GQ-IGx"/>
+                <outlet property="searchBar" destination="y9U-pt-Uhg" id="fQD-h1-G1P"/>
+                <outlet property="userView" destination="nUv-9s-KUV" id="pah-Fp-VN7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nUv-9s-KUV" userLabel="User View">
+                    <rect key="frame" x="0.0" y="59" width="393" height="170"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XZp-YL-2O8" userLabel="Line View">
+                    <rect key="frame" x="0.0" y="229" width="393" height="1"/>
+                    <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="W5u-3U-I4d"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFz-KB-1Si">
+                    <rect key="frame" x="0.0" y="230" width="393" height="64"/>
+                    <subviews>
+                        <searchBar contentMode="redraw" placeholder="想轉一筆給誰呢？" translatesAutoresizingMaskIntoConstraints="NO" id="y9U-pt-Uhg">
+                            <rect key="frame" x="30" y="8" width="294" height="56"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="ews-wk-4QI"/>
+                            </connections>
+                        </searchBar>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="icBtnAddFriends" translatesAutoresizingMaskIntoConstraints="NO" id="YUd-tA-c9R">
+                            <rect key="frame" x="338" y="23.666666666666671" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="8Oa-dB-rrn"/>
+                                <constraint firstAttribute="height" constant="25" id="C10-xt-o92"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="YUd-tA-c9R" secondAttribute="trailing" constant="30" id="9Ro-0u-NqW"/>
+                        <constraint firstAttribute="bottom" secondItem="y9U-pt-Uhg" secondAttribute="bottom" id="MgX-2T-ezy"/>
+                        <constraint firstItem="YUd-tA-c9R" firstAttribute="centerY" secondItem="y9U-pt-Uhg" secondAttribute="centerY" id="PTh-8D-v3R"/>
+                        <constraint firstItem="y9U-pt-Uhg" firstAttribute="leading" secondItem="EFz-KB-1Si" secondAttribute="leading" constant="30" id="fPm-RW-Vqw"/>
+                        <constraint firstItem="y9U-pt-Uhg" firstAttribute="top" secondItem="EFz-KB-1Si" secondAttribute="top" constant="8" id="fqO-bs-eXp"/>
+                        <constraint firstAttribute="trailing" secondItem="y9U-pt-Uhg" secondAttribute="trailing" constant="69" id="pns-4c-PGM"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7ky-3a-Tom">
+                    <rect key="frame" x="20" y="294" width="353" height="524"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="7ky-3a-Tom" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="14q-BK-a1Q"/>
+                <constraint firstItem="EFz-KB-1Si" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2KY-Sh-AeH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XZp-YL-2O8" secondAttribute="trailing" id="5qf-3d-zeY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7ky-3a-Tom" secondAttribute="bottom" id="6bq-FQ-M0n"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nUv-9s-KUV" secondAttribute="trailing" id="TKL-u8-AVs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7ky-3a-Tom" secondAttribute="trailing" constant="20" id="TkT-pT-K4h"/>
+                <constraint firstItem="7ky-3a-Tom" firstAttribute="top" secondItem="EFz-KB-1Si" secondAttribute="bottom" id="e54-8s-UCP"/>
+                <constraint firstItem="nUv-9s-KUV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eLD-q1-eMu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EFz-KB-1Si" secondAttribute="trailing" id="exW-LV-kHh"/>
+                <constraint firstItem="nUv-9s-KUV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="hPa-eo-f27"/>
+                <constraint firstItem="EFz-KB-1Si" firstAttribute="top" secondItem="XZp-YL-2O8" secondAttribute="bottom" id="jdr-SW-hBw"/>
+                <constraint firstItem="XZp-YL-2O8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="per-rc-zTp"/>
+                <constraint firstItem="XZp-YL-2O8" firstAttribute="top" secondItem="nUv-9s-KUV" secondAttribute="bottom" id="xL1-42-BZh"/>
+            </constraints>
+            <point key="canvasLocation" x="44" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icBtnAddFriends" width="25" height="25"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
