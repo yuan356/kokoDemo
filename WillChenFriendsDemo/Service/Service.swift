@@ -43,7 +43,7 @@ class Service {
                 .responseDecodable(of: APIResponse<T>.self) { response in
                     switch response.result {
                     case .success(let data):
-                        print("call api: \(url)")
+//                        print("call api: \(url)")
 
                         single(.success(data.response))
                     case .failure(let error):
