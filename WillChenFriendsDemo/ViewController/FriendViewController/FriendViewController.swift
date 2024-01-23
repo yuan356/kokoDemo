@@ -9,12 +9,15 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+private let USER_VIEW_HEIGHT_DEFAULT: CGFloat = 136
+
 class FriendViewController: UIViewController, UISearchBarDelegate {
 
     @IBOutlet weak var userView: UIView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var friendTableView: UITableView!
-    
+    @IBOutlet weak var goBackBtn: UIButton!
+
     var userViewHeight: NSLayoutConstraint!
     
     let userViewModel = UserViewModel()
@@ -35,6 +38,8 @@ class FriendViewController: UIViewController, UISearchBarDelegate {
     
     var friendListType: FriendType!
     
+    var heightForInvited: CGFloat = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
             
@@ -47,29 +52,16 @@ class FriendViewController: UIViewController, UISearchBarDelegate {
         friendViewModel = FriendViewModel(fetchFriendsTrigger: refreshTrigger, friendType: friendListType, searchTextObservable: searchBar.rx.text.orEmpty.asObservable())
         
         bindViewModel()
-        
-        
-//            .flatMapLatest { [weak self] _ in
-//                self?.fetchFriendsTrigger.onNext(())
-//            }
-//            .
-//            .subscribe(onNext: { [weak self] _ in
-//                print("re")
-//                self?.fetchFriendsTrigger.onNext(())
-//            })
-//                    .flatMapLatest { [weak self] _ -> Observable<Void> in
-//                        guard let self = self else { return Observable.empty() }
-//                        return self.loadData()
-//                    }
-//                    .subscribe(onNext: { [weak self] in
-//                        // 刷新完毕后停止刷新动画
-//                        self?.refreshControl.endRefreshing()
-//                    })
-//                    .disposed(by: disposeBag)
     }
     
     private func setUI() {
         navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        let tapGesture = UITapGestureRecognizer()
+        view.addGestureRecognizer(tapGesture)
+        tapGesture.rx.event.bind(onNext: { [weak self] _ in 
+            self?.view.endEditing(true)
+        }).disposed(by: disposeBag)
 
         self.view.addSubview(myUserView)
         myUserView.backgroundColor = .brown
@@ -79,7 +71,7 @@ class FriendViewController: UIViewController, UISearchBarDelegate {
         myUserView.leftAnchor.constraint(equalTo: userView.leftAnchor).isActive = true
         myUserView.rightAnchor.constraint(equalTo: userView.rightAnchor).isActive = true
         
-        userViewHeight = myUserView.heightAnchor.constraint(equalToConstant: 170)
+        userViewHeight = myUserView.heightAnchor.constraint(equalToConstant: USER_VIEW_HEIGHT_DEFAULT)
         userViewHeight.isActive = true
         
         searchBar.delegate = self
@@ -94,7 +86,7 @@ class FriendViewController: UIViewController, UISearchBarDelegate {
         userViewModel.username.drive(myUserView.nameLabel.rx.text).disposed(by: disposeBag)
         userViewModel.kokoid.drive(myUserView.kokoidLabel.rx.text).disposed(by: disposeBag)
         
-        myUserView.goBackBtn.rx.tap.bind { [weak self] in
+        goBackBtn.rx.tap.bind { [weak self] in
             self?.navigationController?.popViewController(animated: true)
         }.disposed(by: disposeBag)
         
@@ -150,6 +142,18 @@ class FriendViewController: UIViewController, UISearchBarDelegate {
               }
               .disposed(by: disposeBag)
         
+        searchBar.rx.textDidBeginEditing
+                .subscribe(onNext: { [weak self] in
+                    self?.adjustLayoutForSearchBar()
+                })
+                .disposed(by: disposeBag)
+        
+        searchBar.rx.textDidEndEditing
+                    .subscribe(onNext: { [weak self] in
+                        self?.adjustLayoutForSearchBar(reset: true)
+                    })
+                    .disposed(by: disposeBag)
+        
         refreshTrigger.subscribe(onNext: { [weak self] _ in
             self?.resetUserView()
         }).disposed(by: disposeBag)
@@ -160,24 +164,33 @@ class FriendViewController: UIViewController, UISearchBarDelegate {
         friendTableView.register(nib, forCellReuseIdentifier: "FriendTableViewCell")
         friendTableView.separatorStyle = .none
         friendTableView.refreshControl = refreshControl
-
+    }
+    
+    private func adjustLayoutForSearchBar(reset: Bool = false) {
+        self.userViewHeight.constant = reset ? USER_VIEW_HEIGHT_DEFAULT + self.heightForInvited : 0
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+            self.myUserView.alpha = reset ? 1 : 0
+         }
     }
     
     private func resetUserView() {
-        userViewHeight.constant = 170
+        userViewHeight.constant = USER_VIEW_HEIGHT_DEFAULT
         myUserView.removeAllInvitedFriend()
     }
     
     private func updateUserView(friends: [Friend]) {
 
-        userViewHeight.constant += 100
+        heightForInvited = 100
+        userViewHeight.constant += heightForInvited
+        
         self.myUserView.addInvitedFriend(friends: friends)
         
         myUserView.invitedTap?.rx.event.bind(onNext: { [weak self] _ in
             if self?.myUserView.isExpanded == false {
-                self?.userViewHeight.constant += CGFloat(70 * (friends.count - 1)) + 24
+                self?.userViewHeight.constant += CGFloat(70 * (friends.count - 1))
             } else {
-                self?.userViewHeight.constant = 270
+                self?.userViewHeight.constant = USER_VIEW_HEIGHT_DEFAULT + (self?.heightForInvited ?? 0)
             }
             self?.myUserView.expandFriendList()
 

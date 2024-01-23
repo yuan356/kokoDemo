@@ -37,7 +37,6 @@ class UserView: UIView {
     func removeAllInvitedFriend() {
         for view in invitedFriendBackViews {
             view.removeFromSuperview()
-//            view.removeGestureRecognizer(invitedTap)
         }
         invitedFriendBackViews.removeAll()
         isExpanded = false
@@ -54,7 +53,7 @@ class UserView: UIView {
         
         self.addSubview(friendView)
         let constraints: [NSLayoutConstraint] = [
-            friendView.topAnchor.constraint(equalTo: self.topAnchor, constant: 140),
+            friendView.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
             friendView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 30),
             friendView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -30),
             friendView.heightAnchor.constraint(equalToConstant: 70)
@@ -93,7 +92,7 @@ class UserView: UIView {
     
     func expandFriendList() {
 
-        print(isExpanded ? "collapse":"expanded")
+//        print(isExpanded ? "collapse":"expanded")
         let leftConstant: CGFloat = isExpanded ? 10 : 0
         let rightConstant: CGFloat = isExpanded ? -10 : 0
         

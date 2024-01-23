@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendViewController" customModule="WillChenFriendsDemo" customModuleProvider="target">
             <connections>
                 <outlet property="friendTableView" destination="7ky-3a-Tom" id="LKG-GQ-IGx"/>
+                <outlet property="goBackBtn" destination="vNC-4n-faR" id="7DA-aV-WS4"/>
                 <outlet property="searchBar" destination="y9U-pt-Uhg" id="fQD-h1-G1P"/>
                 <outlet property="userView" destination="nUv-9s-KUV" id="pah-Fp-VN7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -21,9 +22,57 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QAp-8y-wMS" userLabel="Top View">
+                    <rect key="frame" x="0.0" y="59" width="393" height="45"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="icNavPinkScan" translatesAutoresizingMaskIntoConstraints="NO" id="rMF-C1-cIs">
+                            <rect key="frame" x="349" y="10.666666666666671" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="SYG-KN-ePq"/>
+                                <constraint firstAttribute="height" constant="24" id="cJM-x6-cpQ"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="SME-dg-XuP">
+                            <rect key="frame" x="20" y="10.666666666666671" width="72" height="24"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="icNavPinkWithdraw" translatesAutoresizingMaskIntoConstraints="NO" id="iLi-Ed-t47">
+                                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="24" id="Ner-HM-Hso"/>
+                                        <constraint firstAttribute="width" constant="24" id="zsu-aw-bGx"/>
+                                    </constraints>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="icNavPinkTransfer" translatesAutoresizingMaskIntoConstraints="NO" id="1oa-aP-CxU">
+                                    <rect key="frame" x="48" y="0.0" width="24" height="24"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="24" id="MVC-1U-I8y"/>
+                                        <constraint firstAttribute="height" constant="24" id="pUc-0M-0iU"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNC-4n-faR">
+                            <rect key="frame" x="20" y="10.666666666666671" width="72" height="24"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="rMF-C1-cIs" secondAttribute="trailing" constant="20" id="5yh-cN-34l"/>
+                        <constraint firstItem="vNC-4n-faR" firstAttribute="top" secondItem="SME-dg-XuP" secondAttribute="top" id="7iL-fO-GDm"/>
+                        <constraint firstItem="SME-dg-XuP" firstAttribute="leading" secondItem="QAp-8y-wMS" secondAttribute="leading" constant="20" id="Dbp-XL-m6X"/>
+                        <constraint firstItem="SME-dg-XuP" firstAttribute="centerY" secondItem="QAp-8y-wMS" secondAttribute="centerY" id="OHf-uP-uqO"/>
+                        <constraint firstItem="vNC-4n-faR" firstAttribute="bottom" secondItem="SME-dg-XuP" secondAttribute="bottom" id="Tz3-ic-dwj"/>
+                        <constraint firstItem="vNC-4n-faR" firstAttribute="leading" secondItem="SME-dg-XuP" secondAttribute="leading" id="dbO-np-IT3"/>
+                        <constraint firstItem="vNC-4n-faR" firstAttribute="trailing" secondItem="SME-dg-XuP" secondAttribute="trailing" id="o95-7u-K77"/>
+                        <constraint firstAttribute="height" constant="45" id="toN-iG-Ald"/>
+                        <constraint firstItem="rMF-C1-cIs" firstAttribute="centerY" secondItem="QAp-8y-wMS" secondAttribute="centerY" id="urW-Ny-t14"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nUv-9s-KUV" userLabel="User View">
                     <rect key="frame" x="0.0" y="59" width="393" height="170"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XZp-YL-2O8" userLabel="Line View">
                     <rect key="frame" x="0.0" y="229" width="393" height="1"/>
@@ -43,7 +92,7 @@
                             </connections>
                         </searchBar>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="icBtnAddFriends" translatesAutoresizingMaskIntoConstraints="NO" id="YUd-tA-c9R">
-                            <rect key="frame" x="338" y="23.666666666666671" width="25" height="25"/>
+                            <rect key="frame" x="338" y="23.666666666666657" width="25" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="25" id="8Oa-dB-rrn"/>
                                 <constraint firstAttribute="height" constant="25" id="C10-xt-o92"/>
@@ -74,11 +123,14 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7ky-3a-Tom" secondAttribute="bottom" id="6bq-FQ-M0n"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nUv-9s-KUV" secondAttribute="trailing" id="TKL-u8-AVs"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7ky-3a-Tom" secondAttribute="trailing" constant="20" id="TkT-pT-K4h"/>
+                <constraint firstItem="QAp-8y-wMS" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="a4N-9i-54a"/>
                 <constraint firstItem="7ky-3a-Tom" firstAttribute="top" secondItem="EFz-KB-1Si" secondAttribute="bottom" id="e54-8s-UCP"/>
                 <constraint firstItem="nUv-9s-KUV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eLD-q1-eMu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EFz-KB-1Si" secondAttribute="trailing" id="exW-LV-kHh"/>
-                <constraint firstItem="nUv-9s-KUV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="hPa-eo-f27"/>
+                <constraint firstItem="nUv-9s-KUV" firstAttribute="top" secondItem="QAp-8y-wMS" secondAttribute="bottom" id="g9F-al-Oon"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QAp-8y-wMS" secondAttribute="trailing" id="gEh-Ed-Pfb"/>
                 <constraint firstItem="EFz-KB-1Si" firstAttribute="top" secondItem="XZp-YL-2O8" secondAttribute="bottom" id="jdr-SW-hBw"/>
+                <constraint firstItem="QAp-8y-wMS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jhZ-Ko-faq"/>
                 <constraint firstItem="XZp-YL-2O8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="per-rc-zTp"/>
                 <constraint firstItem="XZp-YL-2O8" firstAttribute="top" secondItem="nUv-9s-KUV" secondAttribute="bottom" id="xL1-42-BZh"/>
             </constraints>
@@ -87,6 +139,9 @@
     </objects>
     <resources>
         <image name="icBtnAddFriends" width="25" height="25"/>
+        <image name="icNavPinkScan" width="24" height="24"/>
+        <image name="icNavPinkTransfer" width="24" height="24"/>
+        <image name="icNavPinkWithdraw" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
