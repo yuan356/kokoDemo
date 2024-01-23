@@ -13,6 +13,8 @@
                 <outlet property="friendTableView" destination="7ky-3a-Tom" id="LKG-GQ-IGx"/>
                 <outlet property="goBackBtn" destination="vNC-4n-faR" id="7DA-aV-WS4"/>
                 <outlet property="searchBar" destination="y9U-pt-Uhg" id="fQD-h1-G1P"/>
+                <outlet property="searchView" destination="EFz-KB-1Si" id="iLF-Lq-0tv"/>
+                <outlet property="searchViewHeight" destination="qC6-FD-xKa" id="Fek-jE-JPP"/>
                 <outlet property="userView" destination="nUv-9s-KUV" id="pah-Fp-VN7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -102,11 +104,11 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="YUd-tA-c9R" secondAttribute="trailing" constant="30" id="9Ro-0u-NqW"/>
-                        <constraint firstAttribute="bottom" secondItem="y9U-pt-Uhg" secondAttribute="bottom" id="MgX-2T-ezy"/>
                         <constraint firstItem="YUd-tA-c9R" firstAttribute="centerY" secondItem="y9U-pt-Uhg" secondAttribute="centerY" id="PTh-8D-v3R"/>
                         <constraint firstItem="y9U-pt-Uhg" firstAttribute="leading" secondItem="EFz-KB-1Si" secondAttribute="leading" constant="30" id="fPm-RW-Vqw"/>
                         <constraint firstItem="y9U-pt-Uhg" firstAttribute="top" secondItem="EFz-KB-1Si" secondAttribute="top" constant="8" id="fqO-bs-eXp"/>
                         <constraint firstAttribute="trailing" secondItem="y9U-pt-Uhg" secondAttribute="trailing" constant="69" id="pns-4c-PGM"/>
+                        <constraint firstAttribute="height" constant="64" id="qC6-FD-xKa"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7ky-3a-Tom">

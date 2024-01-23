@@ -17,7 +17,9 @@ class FriendViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var friendTableView: UITableView!
     @IBOutlet weak var goBackBtn: UIButton!
-
+    @IBOutlet weak var searchViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var searchView: UIView!
+    
     var userViewHeight: NSLayoutConstraint!
     
     let userViewModel = UserViewModel()
@@ -101,6 +103,7 @@ class FriendViewController: UIViewController, UISearchBarDelegate {
                 self?.friendTableView.backgroundView = nil
             } else {
                 self?.friendTableView.backgroundView = self?.tableViewEmptyView
+                self?.setSearchView()
             }
         }.disposed(by: disposeBag)
         
@@ -164,6 +167,11 @@ class FriendViewController: UIViewController, UISearchBarDelegate {
         friendTableView.register(nib, forCellReuseIdentifier: "FriendTableViewCell")
         friendTableView.separatorStyle = .none
         friendTableView.refreshControl = refreshControl
+    }
+    
+    private func setSearchView() {
+        searchView.isHidden = true
+        searchViewHeight.constant = 0
     }
     
     private func adjustLayoutForSearchBar(reset: Bool = false) {
