@@ -1,0 +1,6 @@
+module Pods_WillChenFriendsDemoTests {
+  umbrella header "Pods-WillChenFriendsDemoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

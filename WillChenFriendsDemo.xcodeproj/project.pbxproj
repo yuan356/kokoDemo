@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		496B421EA1D0367A505FBC2A /* libPods-WillChenFriendsDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD552396F704A3A7511B48CE /* libPods-WillChenFriendsDemoTests.a */; };
 		A725A3732B56850700FB524E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A725A3722B56850700FB524E /* AppDelegate.swift */; };
 		A725A3752B56850700FB524E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A725A3742B56850700FB524E /* SceneDelegate.swift */; };
 		A725A37C2B56850800FB524E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A725A37B2B56850800FB524E /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		A725A3982B57AE3700FB524E /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A725A3972B57AE3700FB524E /* UserView.swift */; };
 		A75218172B5F57E10082CB2D /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A75218152B5F57E10082CB2D /* MenuViewController.xib */; };
 		A75218182B5F57E10082CB2D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75218162B5F57E10082CB2D /* MenuViewController.swift */; };
+		A75218202B639F7F0082CB2D /* WillChenFriendsDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A752181F2B639F7F0082CB2D /* WillChenFriendsDemoTests.swift */; };
 		A76054502B5F579F00B66167 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A760544E2B5F579F00B66167 /* FriendTableViewCell.swift */; };
 		A76054512B5F579F00B66167 /* FriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A760544F2B5F579F00B66167 /* FriendTableViewCell.xib */; };
 		A76165EE2B57C8A80081CB48 /* KokoTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76165ED2B57C8A80081CB48 /* KokoTabBarController.swift */; };
@@ -32,7 +34,18 @@
 		D8E9DF626A47D2490327ACB1 /* Pods_WillChenFriendsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E9B3E9535776EBAF5455AB /* Pods_WillChenFriendsDemo.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A75218212B639F7F0082CB2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A725A3672B56850700FB524E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A725A36E2B56850700FB524E;
+			remoteInfo = WillChenFriendsDemo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		04FEE6151FA69C8AB3E24686 /* Pods-WillChenFriendsDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WillChenFriendsDemoTests.release.xcconfig"; path = "Target Support Files/Pods-WillChenFriendsDemoTests/Pods-WillChenFriendsDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		21E9B3E9535776EBAF5455AB /* Pods_WillChenFriendsDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WillChenFriendsDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AFCA1B47C13665A7DA10F77 /* Pods-WillChenFriendsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WillChenFriendsDemo.release.xcconfig"; path = "Target Support Files/Pods-WillChenFriendsDemo/Pods-WillChenFriendsDemo.release.xcconfig"; sourceTree = "<group>"; };
 		A725A36F2B56850700FB524E /* WillChenFriendsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WillChenFriendsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +63,8 @@
 		A725A3972B57AE3700FB524E /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		A75218152B5F57E10082CB2D /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		A75218162B5F57E10082CB2D /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		A752181D2B639F7F0082CB2D /* WillChenFriendsDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WillChenFriendsDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A752181F2B639F7F0082CB2D /* WillChenFriendsDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WillChenFriendsDemoTests.swift; sourceTree = "<group>"; };
 		A760544E2B5F579F00B66167 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		A760544F2B5F579F00B66167 /* FriendTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendTableViewCell.xib; sourceTree = "<group>"; };
 		A76165ED2B57C8A80081CB48 /* KokoTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KokoTabBarController.swift; sourceTree = "<group>"; };
@@ -59,6 +74,8 @@
 		A7A019AF2B5A654C008A6A9B /* EmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
 		A7E28BBF2B5E580200186D0F /* FriendInvitedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendInvitedView.swift; sourceTree = "<group>"; };
 		A7E28BC12B5E580900186D0F /* FriendInvitedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendInvitedView.xib; sourceTree = "<group>"; };
+		AD552396F704A3A7511B48CE /* libPods-WillChenFriendsDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WillChenFriendsDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F19358E4E64E950D1536625E /* Pods-WillChenFriendsDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WillChenFriendsDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-WillChenFriendsDemoTests/Pods-WillChenFriendsDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FBF707B5A9937E88FE962CC7 /* Pods-WillChenFriendsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WillChenFriendsDemo.debug.xcconfig"; path = "Target Support Files/Pods-WillChenFriendsDemo/Pods-WillChenFriendsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +88,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A752181A2B639F7F0082CB2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				496B421EA1D0367A505FBC2A /* libPods-WillChenFriendsDemoTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				A725A3712B56850700FB524E /* WillChenFriendsDemo */,
+				A752181E2B639F7F0082CB2D /* WillChenFriendsDemoTests */,
 				A725A3702B56850700FB524E /* Products */,
 				CE88ADD3BBB02F43D6CE0902 /* Pods */,
 				D363AEEB327700DE00FD4DD8 /* Frameworks */,
@@ -88,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				A725A36F2B56850700FB524E /* WillChenFriendsDemo.app */,
+				A752181D2B639F7F0082CB2D /* WillChenFriendsDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,6 +192,14 @@
 			path = MenuViewController;
 			sourceTree = "<group>";
 		};
+		A752181E2B639F7F0082CB2D /* WillChenFriendsDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				A752181F2B639F7F0082CB2D /* WillChenFriendsDemoTests.swift */,
+			);
+			path = WillChenFriendsDemoTests;
+			sourceTree = "<group>";
+		};
 		A760544D2B5F579F00B66167 /* FriendTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +250,8 @@
 			children = (
 				FBF707B5A9937E88FE962CC7 /* Pods-WillChenFriendsDemo.debug.xcconfig */,
 				8AFCA1B47C13665A7DA10F77 /* Pods-WillChenFriendsDemo.release.xcconfig */,
+				F19358E4E64E950D1536625E /* Pods-WillChenFriendsDemoTests.debug.xcconfig */,
+				04FEE6151FA69C8AB3E24686 /* Pods-WillChenFriendsDemoTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -223,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				21E9B3E9535776EBAF5455AB /* Pods_WillChenFriendsDemo.framework */,
+				AD552396F704A3A7511B48CE /* libPods-WillChenFriendsDemoTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -249,6 +287,25 @@
 			productReference = A725A36F2B56850700FB524E /* WillChenFriendsDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A752181C2B639F7F0082CB2D /* WillChenFriendsDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A75218252B639F7F0082CB2D /* Build configuration list for PBXNativeTarget "WillChenFriendsDemoTests" */;
+			buildPhases = (
+				CB6802F08A141C631C9A9CC2 /* [CP] Check Pods Manifest.lock */,
+				A75218192B639F7F0082CB2D /* Sources */,
+				A752181A2B639F7F0082CB2D /* Frameworks */,
+				A752181B2B639F7F0082CB2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A75218222B639F7F0082CB2D /* PBXTargetDependency */,
+			);
+			name = WillChenFriendsDemoTests;
+			productName = WillChenFriendsDemoTests;
+			productReference = A752181D2B639F7F0082CB2D /* WillChenFriendsDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -261,6 +318,10 @@
 				TargetAttributes = {
 					A725A36E2B56850700FB524E = {
 						CreatedOnToolsVersion = 14.1;
+					};
+					A752181C2B639F7F0082CB2D = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = A725A36E2B56850700FB524E;
 					};
 				};
 			};
@@ -278,6 +339,7 @@
 			projectRoot = "";
 			targets = (
 				A725A36E2B56850700FB524E /* WillChenFriendsDemo */,
+				A752181C2B639F7F0082CB2D /* WillChenFriendsDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -295,6 +357,13 @@
 				A7E28BC22B5E580900186D0F /* FriendInvitedView.xib in Resources */,
 				A725A37C2B56850800FB524E /* Assets.xcassets in Resources */,
 				A7A019AB2B5A651A008A6A9B /* UserView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A752181B2B639F7F0082CB2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +409,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CB6802F08A141C631C9A9CC2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WillChenFriendsDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -364,7 +455,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A75218192B639F7F0082CB2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A75218202B639F7F0082CB2D /* WillChenFriendsDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A75218222B639F7F0082CB2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A725A36E2B56850700FB524E /* WillChenFriendsDemo */;
+			targetProxy = A75218212B639F7F0082CB2D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A725A37D2B56850800FB524E /* LaunchScreen.storyboard */ = {
@@ -548,6 +655,44 @@
 			};
 			name = Release;
 		};
+		A75218232B639F7F0082CB2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F19358E4E64E950D1536625E /* Pods-WillChenFriendsDemoTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 93H5743QJF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yuanwil.WillChenFriendsDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WillChenFriendsDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WillChenFriendsDemo";
+			};
+			name = Debug;
+		};
+		A75218242B639F7F0082CB2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04FEE6151FA69C8AB3E24686 /* Pods-WillChenFriendsDemoTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 93H5743QJF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yuanwil.WillChenFriendsDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WillChenFriendsDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WillChenFriendsDemo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -565,6 +710,15 @@
 			buildConfigurations = (
 				A725A3842B56850800FB524E /* Debug */,
 				A725A3852B56850800FB524E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A75218252B639F7F0082CB2D /* Build configuration list for PBXNativeTarget "WillChenFriendsDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A75218232B639F7F0082CB2D /* Debug */,
+				A75218242B639F7F0082CB2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
